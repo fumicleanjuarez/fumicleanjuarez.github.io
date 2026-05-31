@@ -323,42 +323,43 @@
   /* ============================================================= */
   /* ===== HERO ===== */
   /* ============================================================= */
-  #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 70px}
+  #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 70px;
+    background:linear-gradient(135deg,#0d1b3e 0%,#14255a 60%,#1a3a7a 100%)}
+  #hero::before{content:"";position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;
+    background:radial-gradient(circle,rgba(245,166,35,.18) 0%,transparent 70%);pointer-events:none;z-index:0}
+  #hero::after{content:"";position:absolute;bottom:-80px;left:-80px;width:350px;height:350px;border-radius:50%;
+    background:radial-gradient(circle,rgba(245,166,35,.10) 0%,transparent 70%);pointer-events:none;z-index:0}
+  html.light #hero{background:linear-gradient(135deg,#0d1b3e 0%,#14255a 60%,#1a3a7a 100%)}
   #particles{position:absolute;inset:0;z-index:0}
-  .hero-bg{position:absolute;inset:0;z-index:0;background:
-     radial-gradient(900px 600px at 80% -10%,rgba(245,166,35,.18),transparent 60%),
-     radial-gradient(700px 600px at 0% 110%,rgba(37,99,235,.16),transparent 60%),
-     linear-gradient(160deg,var(--color-bg),#0c1326 60%,#0a0e1a)}
-  html.light .hero-bg{background:
-     radial-gradient(900px 600px at 80% -10%,rgba(245,166,35,.22),transparent 60%),
-     radial-gradient(700px 600px at 0% 110%,rgba(37,99,235,.10),transparent 60%),
-     linear-gradient(160deg,#eef2fb,#fff 60%,#f4f7fd)}
-  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;width:100%}
-  .hero-text h1{font-size:clamp(2.7rem,7vw,5rem);line-height:.98;margin:18px 0}
+  .hero-bg{display:none}
+  .hero-grid{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:40px;width:100%;flex-wrap:wrap}
+  .hero-text{flex:1;min-width:280px}
+  .hero-text h1{font-size:clamp(2.7rem,7vw,5rem);line-height:1;margin:18px 0;color:#fff;letter-spacing:-.01em}
   .hero-text h1 .g{background:linear-gradient(120deg,var(--color-primary),var(--color-secondary));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   #typewriter{color:var(--color-primary)}
   .tw-cursor{display:inline-block;width:3px;background:var(--color-primary);margin-left:2px;animation:blink 1s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
-  .hero-text p.sub{color:var(--color-muted);font-size:1.08rem;max-width:480px;margin:0 0 30px}
+  .hero-text p.sub{color:rgba(255,255,255,.65);font-size:1.05rem;max-width:480px;margin:0 0 30px;line-height:1.7}
+  .hero-text .eyebrow{background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.4);color:var(--color-primary);padding:5px 14px;border-radius:50px;font-size:.78rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;margin-bottom:18px}
   .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-  .hero-art{position:relative;display:grid;place-items:center}
+  .hero-art{flex-shrink:0;position:relative;display:grid;place-items:center}
   .hero-art .ring{position:absolute;border-radius:50%;border:1px dashed rgba(245,166,35,.35)}
   .hero-art .ring.r1{width:360px;height:360px;animation:spin 26s linear infinite}
   .hero-art .ring.r2{width:280px;height:280px;animation:spin 18s linear infinite reverse}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .hero-art .badge-logo{width:230px;height:230px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#16224a,#0a1124);box-shadow:0 0 0 6px rgba(245,166,35,.12),0 30px 70px -10px rgba(0,0,0,.7);position:relative}
+  .hero-art .badge-logo{width:230px;height:230px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#16224a,#0a1124);box-shadow:0 0 0 6px rgba(245,166,35,.2),0 30px 70px -10px rgba(0,0,0,.7);position:relative}
   .hero-art .badge-logo img{width:200px;height:200px;border-radius:50%}
-  .float-card{position:absolute;background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--glass-border);border-radius:16px;padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;box-shadow:var(--shadow-card)}
+  .float-card{position:absolute;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;color:#fff;box-shadow:0 8px 32px rgba(0,0,0,.3)}
   .float-card i{color:var(--color-primary);font-size:1.1rem}
   .fc-1{top:8%;right:0;animation:floaty 4s ease-in-out infinite}
   .fc-2{bottom:6%;left:-10px;animation:floaty 5s ease-in-out infinite .6s}
   @keyframes floaty{50%{transform:translateY(-12px)}}
 
-  /* stats */
-  .stats-bar{position:relative;z-index:3;margin-top:54px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .stat{background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;padding:20px;text-align:center;backdrop-filter:blur(6px)}
-  .stat .num{font-family:var(--font-heading);font-size:2.3rem;font-weight:800;color:var(--color-primary);line-height:1}
-  .stat .lbl{font-size:.74rem;color:var(--color-muted);text-transform:uppercase;letter-spacing:.1em;margin-top:6px}
+  /* stats — inline bajo el texto */
+  .stats-bar{position:relative;z-index:3;margin-top:44px;display:flex;gap:32px;flex-wrap:wrap}
+  .stat{background:none;border:none;border-radius:0;padding:0;text-align:left;backdrop-filter:none}
+  .stat .num{font-family:var(--font-heading);font-size:2.2rem;font-weight:800;color:var(--color-primary);line-height:1}
+  .stat .lbl{font-size:.74rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
 
   /* ============================================================= */
   /* ===== WHY / glassmorphism cards ===== */
@@ -729,41 +730,34 @@
   /* Logo solo en móvil */
   .hero-logo-mobile{display:none}
 
-  /* ===== MOBILE ESPECÍFICO ===== */
+  /* ===== MOBILE ===== */
+  @media(max-width:768px){
+    .hero-grid{flex-direction:column-reverse;text-align:center}
+    .hero-art{width:220px;height:220px}
+    .hero-art .ring.r1{width:220px;height:220px}
+    .hero-art .ring.r2{width:175px;height:175px}
+    .hero-art .badge-logo{width:160px;height:160px}
+    .hero-art .badge-logo img{width:140px;height:140px}
+    .hero-text p.sub{margin-inline:auto}
+    .hero-btns{justify-content:center}
+    .stats-bar{justify-content:center;gap:20px}
+    .stat{text-align:center}
+    .float-card{display:none}
+  }
+
   @media(max-width:480px){
     .wrap{padding-inline:20px}
-    #hero{padding:80px 0 40px;overflow:hidden}
-
-    /* Hero: logo arriba, texto abajo, todo centrado */
-    .hero-grid{display:flex!important;flex-direction:column;align-items:center;text-align:center;gap:20px}
-    .hero-art{display:none!important}
-    .float-card{display:none!important}
+    #hero{padding:80px 0 50px}
+    .hero-text .eyebrow{display:none}
     .tw-cursor{display:none}
     #typewriter{display:none}
-
-    /* Logo móvil centrado con anillos */
-    .hero-logo-mobile{display:flex;justify-content:center;align-items:center;position:relative;width:180px;height:180px;margin:0 auto}
-    .hero-logo-mobile .ring-m{position:absolute;border-radius:50%;border:1px dashed rgba(245,166,35,.45);top:50%;left:50%;transform:translate(-50%,-50%)}
-    .hero-logo-mobile .ring-m.r1{width:175px;height:175px;animation:spin 22s linear infinite}
-    .hero-logo-mobile .ring-m.r2{width:145px;height:145px;animation:spin 15s linear infinite reverse}
-    .hero-logo-mobile img{width:120px;height:120px;border-radius:50%;object-fit:cover;position:relative;z-index:1;box-shadow:0 0 0 4px rgba(245,166,35,.3)}
-
-    /* Texto */
-    .hero-text{order:2;width:100%}
-    .hero-text .eyebrow{display:none}
-    .hero-text h1{font-size:2rem;line-height:1.1;margin:0 0 12px}
+    .hero-text h1{font-size:2.2rem}
     .hero-text h1 br{display:none}
-    .hero-text p.sub{font-size:.9rem;margin:0 0 20px;color:var(--color-muted)}
-    .hero-btns{flex-direction:column;gap:10px;align-items:stretch;justify-content:center}
+    .hero-btns{flex-direction:column;align-items:stretch}
     .hero-btns .btn{width:100%;justify-content:center}
-
-    /* Stats: fila simple sin tarjetas */
-    .stats-bar{display:flex!important;flex-wrap:wrap;justify-content:center;gap:0;margin-top:28px;background:none;border:none}
-    .stat{background:none!important;border:none!important;backdrop-filter:none;padding:10px 16px;flex:1;min-width:80px;max-width:90px}
-    .stat .num{font-size:1.6rem}
-    .stat .lbl{font-size:.62rem}
-
-    /* Resto de secciones */
+    .stats-bar{gap:12px 20px;margin-top:28px}
+    .stat .num{font-size:1.8rem}
+    .stat .lbl{font-size:.68rem}
     .h-title{font-size:1.75rem}
     .lead{font-size:.92rem}
     .why-grid{grid-template-columns:1fr}
@@ -836,16 +830,16 @@
       <div class="hero-text">
         <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Ciudad Juárez &amp; Área Metropolitana</span>
         <h1>Adiós a las plagas.<br><span class="g" id="typewriter"></span><span class="tw-cursor" aria-hidden="true">&nbsp;</span></h1>
-        <!-- Logo con anillos solo visible en móvil -->
-        <div class="hero-logo-mobile">
-          <div class="ring-m r1"></div>
-          <div class="ring-m r2"></div>
-          <img src="img/logo.png" alt="Fumiclean Juárez" width="120" height="120" />
-        </div>
         <p class="sub">Control de plagas y fumigación profesional con productos de baja toxicidad, técnicos certificados y <strong>garantía en cada servicio</strong>. Tu tranquilidad es nuestra prioridad.</p>
         <div class="hero-btns">
           <a class="btn btn-primary" data-nav="contacto" data-gtag="cta_agendar"><i class="fa-solid fa-calendar-check"></i> Agendar consulta</a>
           <a class="btn btn-ghost" data-nav="servicios"><i class="fa-solid fa-bug"></i> Ver servicios</a>
+        </div>
+        <div class="stats-bar">
+          <div class="stat"><div class="num" style="font-size:2rem;line-height:1.2">Juárez</div><div class="lbl">Cobertura local</div></div>
+          <div class="stat"><div class="num" data-count="11" data-suffix="+">0</div><div class="lbl">Plagas que tratamos</div></div>
+          <div class="stat"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">Satisfacción</div></div>
+          <div class="stat"><div class="num" data-count="24" data-suffix="h">0</div><div class="lbl">Respuesta rápida</div></div>
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
@@ -855,14 +849,6 @@
         </div>
         <div class="float-card fc-1"><i class="fa-solid fa-star"></i> 5 | FB</div>
         <div class="float-card fc-2"><i class="fa-solid fa-certificate"></i> Garantía incluida</div>
-      </div>
-    </div>
-    <div class="wrap">
-      <div class="stats-bar">
-        <div class="stat"><div class="num" style="font-size:2rem;line-height:1.2">Juárez</div><div class="lbl">Cobertura local</div></div>
-        <div class="stat"><div class="num" data-count="11" data-suffix="+">0</div><div class="lbl">Plagas que tratamos</div></div>
-        <div class="stat"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">Satisfacción</div></div>
-        <div class="stat"><div class="num" data-count="24" data-suffix="h">0</div><div class="lbl">Respuesta rápida</div></div>
       </div>
     </div>
   </header>
@@ -1517,7 +1503,7 @@ function applyTheme(t){
   if(tt){ tt.innerHTML = t==='light' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>'; }
 }
 var saved; try{ saved = localStorage.getItem('fc-theme'); }catch(e){}
-applyTheme(saved || 'dark');
+applyTheme(saved || 'light');
 if(tt){ tt.addEventListener('click', function(){
   var light = !document.documentElement.classList.contains('light');
   applyTheme(light?'light':'dark');
