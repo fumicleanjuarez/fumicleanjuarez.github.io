@@ -325,10 +325,8 @@
   /* ============================================================= */
   #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 70px;
     background:linear-gradient(135deg,#0d1b3e 0%,#14255a 60%,#1a3a7a 100%)}
-  #hero::before{content:"";position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;
-    background:radial-gradient(circle,rgba(245,166,35,.18) 0%,transparent 70%);pointer-events:none;z-index:0}
-  #hero::after{content:"";position:absolute;bottom:-80px;left:-80px;width:350px;height:350px;border-radius:50%;
-    background:radial-gradient(circle,rgba(245,166,35,.10) 0%,transparent 70%);pointer-events:none;z-index:0}
+  #hero::before{display:none}
+  #hero::after{display:none}
   html.light #hero{background:linear-gradient(135deg,#0d1b3e 0%,#14255a 60%,#1a3a7a 100%)}
   #particles{position:absolute;inset:0;z-index:0}
   .hero-bg{display:none}
@@ -732,7 +730,7 @@
 
   /* ===== MOBILE ===== */
   @media(max-width:768px){
-    .hero-grid{flex-direction:column-reverse;text-align:center}
+    .hero-grid{flex-direction:column-reverse;text-align:center;position:relative;z-index:2}
     .hero-art{width:220px;height:220px}
     .hero-art .ring.r1{width:220px;height:220px}
     .hero-art .ring.r2{width:175px;height:175px}
@@ -748,6 +746,14 @@
   @media(max-width:480px){
     .wrap{padding-inline:20px}
     #hero{padding:80px 0 50px}
+    /* Logo semitransparente de fondo */
+    #hero::before{
+      content:"";display:block;position:absolute;
+      top:50%;left:50%;transform:translate(-50%,-50%);
+      width:320px;height:320px;
+      background:url('img/logo.png') center/contain no-repeat;
+      opacity:.08;z-index:1;pointer-events:none
+    }
     .hero-text .eyebrow{display:none}
     .tw-cursor{display:none}
     #typewriter{display:none}
