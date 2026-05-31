@@ -731,22 +731,39 @@
 
   /* ===== MOBILE ESPECÍFICO ===== */
   @media(max-width:480px){
-    .wrap{padding-inline:16px}
-    #hero{padding:90px 0 40px;overflow:hidden}
-    .hero-grid{display:block!important;text-align:left}
+    .wrap{padding-inline:20px}
+    #hero{padding:80px 0 40px;overflow:hidden}
+
+    /* Hero: logo arriba, texto abajo, todo centrado */
+    .hero-grid{display:flex!important;flex-direction:column;align-items:center;text-align:center;gap:20px}
     .hero-art{display:none!important}
-    .hero-text h1{font-size:2rem;line-height:1.1;text-align:left;margin:10px 0 12px}
-    .hero-text .eyebrow{font-size:.72rem;text-align:left;display:inline-flex}
-    .hero-text p.sub{font-size:.88rem;text-align:left;margin:0 0 18px;max-width:100%}
-    .hero-btns{justify-content:flex-start;flex-direction:column;gap:10px;align-items:stretch}
-    .hero-btns .btn{width:100%;justify-content:center;text-align:center}
-    .hero-logo-mobile{display:flex;justify-content:center;margin:14px 0 16px}
-    .hero-logo-mobile img{width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px rgba(245,166,35,.3)}
-    .stats-bar{grid-template-columns:1fr 1fr!important;gap:8px;margin-top:24px}
-    .stat{padding:12px 8px}
-    .stat .num{font-size:1.5rem}
-    .stat .lbl{font-size:.65rem}
     .float-card{display:none!important}
+    .tw-cursor{display:none}
+    #typewriter{display:none}
+
+    /* Logo móvil centrado con anillos */
+    .hero-logo-mobile{display:flex;justify-content:center;align-items:center;position:relative;width:180px;height:180px;margin:0 auto}
+    .hero-logo-mobile .ring-m{position:absolute;border-radius:50%;border:1px dashed rgba(245,166,35,.45);top:50%;left:50%;transform:translate(-50%,-50%)}
+    .hero-logo-mobile .ring-m.r1{width:175px;height:175px;animation:spin 22s linear infinite}
+    .hero-logo-mobile .ring-m.r2{width:145px;height:145px;animation:spin 15s linear infinite reverse}
+    .hero-logo-mobile img{width:120px;height:120px;border-radius:50%;object-fit:cover;position:relative;z-index:1;box-shadow:0 0 0 4px rgba(245,166,35,.3)}
+
+    /* Texto */
+    .hero-text{order:2;width:100%}
+    .hero-text .eyebrow{display:none}
+    .hero-text h1{font-size:2rem;line-height:1.1;margin:0 0 12px}
+    .hero-text h1 br{display:none}
+    .hero-text p.sub{font-size:.9rem;margin:0 0 20px;color:var(--color-muted)}
+    .hero-btns{flex-direction:column;gap:10px;align-items:stretch;justify-content:center}
+    .hero-btns .btn{width:100%;justify-content:center}
+
+    /* Stats: fila simple sin tarjetas */
+    .stats-bar{display:flex!important;flex-wrap:wrap;justify-content:center;gap:0;margin-top:28px;background:none;border:none}
+    .stat{background:none!important;border:none!important;backdrop-filter:none;padding:10px 16px;flex:1;min-width:80px;max-width:90px}
+    .stat .num{font-size:1.6rem}
+    .stat .lbl{font-size:.62rem}
+
+    /* Resto de secciones */
     .h-title{font-size:1.75rem}
     .lead{font-size:.92rem}
     .why-grid{grid-template-columns:1fr}
@@ -819,9 +836,11 @@
       <div class="hero-text">
         <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Ciudad Juárez &amp; Área Metropolitana</span>
         <h1>Adiós a las plagas.<br><span class="g" id="typewriter"></span><span class="tw-cursor" aria-hidden="true">&nbsp;</span></h1>
-        <!-- Logo solo visible en móvil -->
+        <!-- Logo con anillos solo visible en móvil -->
         <div class="hero-logo-mobile">
-          <img src="img/logo.png" alt="Fumiclean Juárez" width="140" height="140" />
+          <div class="ring-m r1"></div>
+          <div class="ring-m r2"></div>
+          <img src="img/logo.png" alt="Fumiclean Juárez" width="120" height="120" />
         </div>
         <p class="sub">Control de plagas y fumigación profesional con productos de baja toxicidad, técnicos certificados y <strong>garantía en cada servicio</strong>. Tu tranquilidad es nuestra prioridad.</p>
         <div class="hero-btns">
