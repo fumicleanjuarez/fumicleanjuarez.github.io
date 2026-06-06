@@ -263,6 +263,7 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       transition: background .5s ease, color .5s ease;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='19' rx='6' ry='9' fill='%23c8a000'/%3E%3Cellipse cx='16' cy='10' rx='4.5' ry='5' fill='%23a07800'/%3E%3Cline x1='10' y1='15' x2='2' y2='11' stroke='%23c8a000' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='10' y1='19' x2='1' y2='19' stroke='%23c8a000' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='10' y1='23' x2='2' y2='27' stroke='%23c8a000' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='22' y1='15' x2='30' y2='11' stroke='%23c8a000' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='22' y1='19' x2='31' y2='19' stroke='%23c8a000' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='22' y1='23' x2='30' y2='27' stroke='%23c8a000' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='14' y1='5' x2='10' y2='0' stroke='%23c8a000' stroke-width='1.2' stroke-linecap='round'/%3E%3Cline x1='18' y1='5' x2='22' y2='0' stroke='%23c8a000' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E") 16 16, auto;
     }
 
     a {
@@ -438,33 +439,7 @@
       transition: width .1s linear
     }
 
-    /* ===== CUSTOM CURSOR (solo desktop) ===== */
-    #cursor {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9998;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      color: var(--color-primary);
-      font-size: 1.4rem;
-      display: grid;
-      place-items: center;
-      transition: font-size 0.2s, color 0.2s
-    }
-
-    #cursor.grow {
-      font-size: 2.2rem;
-      color: var(--color-secondary)
-    }
-
-    @media(hover:none), (pointer:coarse) {
-      #cursor {
-        display: none !important
-      }
-    }
-
-    /* ============================================================= */
+/* ============================================================= */
     /* ===== NAVBAR ===== */
     /* ============================================================= */
     nav#topnav {
@@ -869,8 +844,8 @@
     }
 
     .hero-art .badge-logo {
-      width: 230px;
-      height: 230px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       display: grid;
       place-items: center;
@@ -880,8 +855,8 @@
     }
 
     .hero-art .badge-logo img {
-      width: 200px;
-      height: 200px;
+      width: 270px;
+      height: 270px;
       border-radius: 50%
     }
 
@@ -3395,7 +3370,7 @@
 <body>
   <a class="skip-link" href="#main">Saltar al contenido principal</a>
   <div id="progress" aria-hidden="true"></div>
-  <div id="cursor" aria-hidden="true"><i class="fa-solid fa-bug"></i></div>
+
 
   <!-- ===================================================================== -->
   <!-- NAVBAR                                                                -->
@@ -3444,8 +3419,7 @@
 
       <!-- HERO -->
       <header id="hero">
-        <canvas id="particles" aria-hidden="true"></canvas>
-        <div class="hero-bg" aria-hidden="true"></div>
+<div class="hero-bg" aria-hidden="true"></div>
         <div class="wrap hero-grid">
           <div class="hero-text">
             <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Ciudad Juárez &amp; Área
@@ -3457,32 +3431,14 @@
             <div class="hero-btns">
               <a class="btn btn-primary" data-nav="contacto" data-gtag="cta_agendar"><i
                   class="fa-solid fa-calendar-check"></i> Agendar consulta</a>
-              <a class="btn btn-ghost" data-nav="servicios"><i class="fa-solid fa-bug"></i> Ver servicios</a>
-            </div>
-            <div class="stats-bar">
-              <div class="stat">
-                <div class="num" data-count="10" data-suffix="+">0</div>
-                <div class="lbl">Reseñas verificadas ★</div>
-              </div>
-              <div class="stat">
-                <div class="num" data-count="11" data-suffix="+">0</div>
-                <div class="lbl">Plagas que tratamos</div>
-              </div>
-              <div class="stat">
-                <div class="num" data-count="100" data-suffix="%">0</div>
-                <div class="lbl">Satisfacción</div>
-              </div>
-              <div class="stat">
-                <div class="num" data-count="24" data-suffix="h">0</div>
-                <div class="lbl">Respuesta rápida</div>
-              </div>
+              <a class="btn btn-ghost" data-nav="servicios"><i class="fa-solid fa-bug"></i> Ver paquetes</a>
             </div>
           </div>
           <div class="hero-art" aria-hidden="true">
             <div class="ring r1"></div>
             <div class="ring r2"></div>
             <div class="badge-logo">
-              <img src="img/logo.png" alt="Fumiclean Juárez" width="200" height="200"
+              <img src="img/logo.png" alt="Fumiclean Juárez" width="270" height="270"
                 style="border-radius:50%;object-fit:cover;" />
             </div>
             <div class="float-card fc-1"><i class="fa-solid fa-star"></i> 5 | FB</div>
@@ -3523,81 +3479,6 @@
         </div>
       </section>
 
-      <!-- SERVICIOS TABS -->
-      <section class="block" style="background:var(--color-bg-2);border-block:1px solid var(--color-border)">
-        <div class="wrap center">
-          <span class="eyebrow"><i class="fa-solid fa-bug"></i> Nuestros servicios</span>
-          <h2 class="h-title">Soluciones para cada <span class="g">tipo de plaga</span></h2>
-          <div class="tabs" role="tablist">
-            <button class="tab-btn active" data-tab="resid" role="tab">Residencial</button>
-            <button class="tab-btn" data-tab="negoc" role="tab">Negocios</button>
-            <button class="tab-btn" data-tab="prev" role="tab">Preventivo</button>
-          </div>
-          <div class="tab-panel active" id="tab-resid">
-            <div class="tab-inner">
-              <div style="text-align:left">
-                <h3>Fumigación residencial</h3>
-                <p class="lead">Tratamiento interior y exterior de tu hogar contra las plagas más comunes en Ciudad
-                  Juárez.</p>
-                <ul>
-                  <li><i class="fa-solid fa-check"></i> Inspección completa de tu hogar</li>
-                  <li><i class="fa-solid fa-check"></i> Fumigación de cocina, comedor, ventanas y puertas</li>
-                  <li><i class="fa-solid fa-check"></i> Cebo especializado y regulador de crecimiento (paquete Completo)
-                  </li>
-                  <li><i class="fa-solid fa-check"></i> Garantía de servicio incluida</li>
-                </ul>
-                <a class="btn btn-primary" data-nav="servicios" style="margin-top:20px"><i
-                    class="fa-solid fa-arrow-right"></i> Ver paquetes</a>
-              </div>
-              <div class="tab-img"><img src="img/fumigador.png"
-                  alt="Técnico de fumigación tratando una cocina residencial" width="640" height="480" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="tab-panel" id="tab-negoc">
-            <div class="tab-inner">
-              <div style="text-align:left">
-                <h3>Control de plagas para negocios</h3>
-                <p class="lead">Planes de manejo integrado para restaurantes, bodegas, oficinas y comercios.</p>
-                <ul>
-                  <li><i class="fa-solid fa-check"></i> Visita de diagnóstico y cotización personalizada</li>
-                  <li><i class="fa-solid fa-check"></i> Soluciones según giro y tamaño del negocio</li>
-                  <li><i class="fa-solid fa-check"></i> Atención prioritaria y programable</li>
-                  <li><i class="fa-solid fa-check"></i> El costo de cotización ($400) se deduce al contratar</li>
-                </ul>
-                <a class="btn btn-primary"
-                  href="https://wa.me/526563859489?text=Hola!%20Necesito%20control%20de%20plagas%20para%20mi%20negocio"
-                  target="_blank" rel="noopener" data-gtag="wa_negocio" style="margin-top:20px"><i
-                    class="fa-brands fa-whatsapp"></i> Cotizar negocio</a>
-              </div>
-              <div class="tab-img"><img
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=640&q=70&auto=format&fit=crop"
-                  alt="Interior de un restaurante limpio y protegido contra plagas" width="640" height="480"
-                  loading="lazy"></div>
-            </div>
-          </div>
-          <div class="tab-panel" id="tab-prev">
-            <div class="tab-inner">
-              <div style="text-align:left">
-                <h3>Mantenimiento preventivo</h3>
-                <p class="lead">Evita que las plagas regresen con aplicaciones programadas a lo largo del año.</p>
-                <ul>
-                  <li><i class="fa-solid fa-check"></i> Aplicación trimestral recomendada</li>
-                  <li><i class="fa-solid fa-check"></i> Sellado de puntos de acceso y monitoreo</li>
-                  <li><i class="fa-solid fa-check"></i> Ideal para hogares y negocios con recurrencia</li>
-                  <li><i class="fa-solid fa-check"></i> Reportes y recomendaciones por visita</li>
-                </ul>
-                <a class="btn btn-primary" data-nav="contacto" style="margin-top:20px"><i
-                    class="fa-solid fa-calendar-check"></i> Agendar</a>
-              </div>
-              <div class="tab-img"><img
-                  src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=640&q=70&auto=format&fit=crop"
-                  alt="Hogar limpio y libre de plagas tras mantenimiento preventivo" width="640" height="480"
-                  loading="lazy"></div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- PROCESO -->
       <section class="block">
@@ -3625,6 +3506,9 @@
               <h4>Garantía</h4>
               <p>Damos seguimiento y revisita si es necesario.</p>
             </div>
+          </div>
+          <div style="margin-top:40px;text-align:center">
+            <a class="btn btn-primary" data-nav="servicios" style="border-radius:50px;padding:16px 36px;font-size:1rem;box-shadow:0 10px 32px -6px rgba(245,166,35,.6)"><i class="fa-solid fa-tags"></i> Ver paquetes</a>
           </div>
         </div>
       </section>
@@ -4087,8 +3971,6 @@
                 rápida</span></a>
             <a class="ccard" href="https://www.facebook.com/fumicleanjuarez" target="_blank" rel="noopener"><i
                 class="fa-brands fa-facebook"></i><b>Facebook</b><span>@fumicleanjuarez</span></a>
-            <div class="ccard"><i class="fa-solid fa-clock"></i><b>Horario</b><span>Lun–Vie · 8am–8pm · Sáb ·
-                8am–1pm</span></div>
           </div>
 
           <div class="contact-split">
@@ -4350,7 +4232,6 @@
             <li><a href="https://wa.me/526563859489" target="_blank" rel="noopener"><i
                   class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
             <li><a><i class="fa-solid fa-location-dot"></i> Ciudad Juárez, Chih.</a></li>
-            <li><a><i class="fa-solid fa-clock"></i> Lun–Vie · 8am–8pm &nbsp;|&nbsp; Sáb · 8am–1pm</a></li>
           </ul>
         </div>
       </div>
@@ -4619,30 +4500,6 @@
         });
       }
 
-      /* ============== CURSOR DE INSECTO ============== */
-      (function () {
-        if (window.matchMedia('(pointer:coarse)').matches) return;
-        var c = $('#cursor'); if (!c) return;
-        var cx = 0, cy = 0, dx = 0, dy = 0, angle = 0;
-        document.addEventListener('mousemove', function (e) { dx = e.clientX; dy = e.clientY; });
-        function loop() {
-          var vx = (dx - cx) * 0.2;
-          var vy = (dy - cy) * 0.2;
-          cx += vx; cy += vy;
-          if (Math.abs(vx) > 0.5 || Math.abs(vy) > 0.5) {
-            var targetAngle = Math.atan2(vy, vx) * 180 / Math.PI + 90;
-            var diff = targetAngle - angle;
-            while (diff < -180) diff += 360;
-            while (diff > 180) diff -= 360;
-            angle += diff * 0.15;
-          }
-          c.style.transform = 'translate(' + cx + 'px,' + cy + 'px) translate(-50%,-50%) rotate(' + angle + 'deg)';
-          requestAnimationFrame(loop);
-        }
-        loop();
-        document.addEventListener('mouseover', function (e) { if (e.target.closest('a,button,.tab-btn,.pest,.faq-q,[data-nav]')) c.classList.add('grow'); });
-        document.addEventListener('mouseout', function (e) { if (e.target.closest('a,button,.tab-btn,.pest,.faq-q,[data-nav]')) c.classList.remove('grow'); });
-      })();
 
       /* ============== TYPEWRITER ============== */
       (function () {
@@ -4660,34 +4517,6 @@
         tick();
       })();
 
-      /* ============== PARTÍCULAS DINÁMICAS ============== */
-      (function () {
-        var cv = $('#particles'); if (!cv || RM) return;
-        var ctx = cv.getContext('2d'), parts = [], W, H, mx = -999, my = -999;
-        function size() { var h = $('#hero'); W = cv.width = h.offsetWidth; H = cv.height = h.offsetHeight; }
-        size(); window.addEventListener('resize', size);
-        document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; });
-        for (var i = 0; i < 65; i++) { parts.push({ x: Math.random() * W, y: Math.random() * H, r: Math.random() * 3 + 1, vx: (Math.random() - .5) * .6, vy: (Math.random() - .5) * .6 }); }
-        function draw() {
-          ctx.clearRect(0, 0, W, H);
-          for (var i = 0; i < parts.length; i++) {
-            var p = parts[i]; p.x += p.vx; p.y += p.vy;
-            if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
-            var dx = mx - p.x, dy = my - p.y, dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 150) { p.x -= dx * 0.01; p.y -= dy * 0.01; }
-            ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7);
-            ctx.shadowBlur = 12; ctx.shadowColor = 'rgba(245,166,35,0.9)';
-            ctx.fillStyle = 'rgba(245,166,35,0.9)'; ctx.fill();
-            ctx.shadowBlur = 0;
-            for (var j = i + 1; j < parts.length; j++) {
-              var q = parts[j], dxx = p.x - q.x, dyy = p.y - q.y, dd = Math.sqrt(dxx * dxx + dyy * dyy);
-              if (dd < 140) { ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.strokeStyle = 'rgba(245,166,35,' + (0.25 * (1 - dd / 140)) + ')'; ctx.stroke(); }
-            }
-          }
-          requestAnimationFrame(draw);
-        }
-        draw();
-      })();
 
       /* ============== CONTADORES ============== */
       (function () {
