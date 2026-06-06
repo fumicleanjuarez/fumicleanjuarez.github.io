@@ -814,6 +814,10 @@
       display: none
     }
 
+    .mobile-show {
+      display: none
+    }
+
     .hero-btns {
       display: flex;
       gap: 14px;
@@ -3196,35 +3200,29 @@
     /* ===== MOBILE ===== */
     @media(max-width:768px) {
       #hero {
-        padding-top: 240px
+        padding-top: 120px
       }
 
       #hero::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 340px;
-        height: 340px;
-        background: url('img/logo.png') center/contain no-repeat;
-        opacity: .08;
-        z-index: 0;
-        pointer-events: none
-      }
-
-      .hero-text p.sub {
         display: none
       }
 
-      .sub-mobile {
+      .hero-logo-mobile {
         display: block;
-        color: rgba(255, 255, 255, .85);
-        font-size: 1.05rem;
-        max-width: 480px;
-        margin: 0 auto 30px;
-        line-height: 1.7
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 20px;
+        opacity: 1
+      }
+
+      .mobile-hide {
+        display: none
+      }
+
+      .mobile-show {
+        display: inline
       }
 
       .hero-grid {
@@ -3287,13 +3285,7 @@
       }
 
       #hero {
-        padding: 190px 0 50px
-      }
-
-      /* Logo semitransparente de fondo — tamaño reducido en pantallas muy pequeñas */
-      #hero::before {
-        width: 280px;
-        height: 280px
+        padding: 120px 0 50px
       }
 
       .hero-text .eyebrow {
@@ -3454,11 +3446,11 @@
           <div class="hero-text">
             <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Ciudad Juárez &amp; Área
               Metropolitana</span>
+            <img class="hero-logo-mobile" src="img/logo.png" alt="Fumiclean Juárez" width="220" height="220" />
             <h1>Adiós a las plagas.<br><span class="g" id="typewriter"></span><span class="tw-cursor"
                 aria-hidden="true">&nbsp;</span></h1>
-            <p class="sub">Control de plagas y fumigación profesional con productos de baja toxicidad, técnicos
-              certificados y <strong>garantía en cada servicio</strong>. Tu tranquilidad es nuestra prioridad.</p>
-            <p class="sub-mobile">Control profesional de plagas.</p>
+            <p class="sub"><span class="mobile-hide">Control de plagas y fumigación profesional con productos de baja toxicidad, técnicos
+              certificados y <strong>garantía en cada servicio</strong>. Tu tranquilidad es nuestra prioridad.</span><span class="mobile-show">Control profesional de plagas.</span></p>
             <div class="hero-btns">
               <a class="btn btn-primary" data-nav="contacto" data-gtag="cta_agendar"><i
                   class="fa-solid fa-calendar-check"></i> Agendar consulta</a>
