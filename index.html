@@ -13,9 +13,9 @@
   <!-- CAMBIAR: título principal (Keyword | Negocio | Ciudad) -->
   <title>Control de Plagas y Fumigación en Ciudad Juárez | Fumiclean Juárez</title>
   <meta name="description"
-    content="Fumiclean Juárez: control de plagas y fumigación profesional en Ciudad Juárez. Cucarachas, chinches, alacranes, roedores y más. Productos de baja toxicidad, técnicos certificados y garantía. Cotiza por WhatsApp." />
+    content="Fumiclean Juárez - Control de plagas y fumigación profesional en Ciudad Juárez. Hormigas, cucarachas, arañas y más. Llámanos al 656-385-9489." />
   <meta name="keywords"
-    content="fumigación Ciudad Juárez, control de plagas Juárez, exterminador cucarachas, fumigar chinches, control de alacranes, fumigadora Juárez, fumigación negocios, plagas hogar" />
+    content="control de plagas Ciudad Juárez, fumigación Juárez, exterminar cucarachas Juárez, fumigadora Chihuahua" />
   <meta name="author" content="Fumiclean Juárez" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0b1020" />
@@ -26,9 +26,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="Fumiclean Juárez" />
-  <meta property="og:title" content="Control de Plagas y Fumigación en Ciudad Juárez | Fumiclean Juárez" />
+  <meta property="og:title" content="Fumiclean Juárez - Control de plagas y fumigación profesional en Ciudad Juárez. Hormigas, cucarachas, arañas y más. Llámanos al 656-385-9489." />
   <meta property="og:description"
-    content="Fumigación profesional con garantía en Ciudad Juárez. Eliminamos cucarachas, chinches, alacranes y más. Cotiza por WhatsApp." />
+    content="Fumiclean Juárez - Control de plagas y fumigación profesional en Ciudad Juárez. Hormigas, cucarachas, arañas y más. Llámanos al 656-385-9489." />
   <meta property="og:url" content="https://www.fumicleanjuarez.com.mx/" />
   <!-- CAMBIAR: imagen de previsualización (1200x630) -->
   <meta property="og:image" content="https://www.fumicleanjuarez.com.mx/og-image.jpg" />
@@ -69,16 +69,20 @@
     "image": "img/logo.png",
     "logo": "img/logo.png",
     "url": "https://www.fumicleanjuarez.com.mx/",
-    "description": "Control de plagas y fumigación profesional en Ciudad Juárez. Productos de baja toxicidad, técnicos certificados y garantía de servicio.",
+    "description": "Fumiclean Juárez - Control de plagas y fumigación profesional en Ciudad Juárez. Hormigas, cucarachas, arañas y más. Llámanos al 656-385-9489.",
     "telephone": "+52-656-385-9489",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ciudad Juárez",
       "addressRegion": "Chihuahua",
+      "postalCode": "32000",
       "addressCountry": "MX"
     },
-    "areaServed": { "@type": "City", "name": "Ciudad Juárez" },
+    "areaServed": [
+      { "@type": "City", "name": "Ciudad Juárez" },
+      { "@type": "AdministrativeArea", "name": "Chihuahua" }
+    ],
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
@@ -3187,6 +3191,25 @@
 
     /* ===== MOBILE ===== */
     @media(max-width:768px) {
+      #hero {
+        padding-top: 160px
+      }
+
+      #hero::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 340px;
+        height: 340px;
+        background: url('img/logo.png') center/contain no-repeat;
+        opacity: .14;
+        z-index: 1;
+        pointer-events: none
+      }
+
       .hero-grid {
         flex-direction: column-reverse;
         text-align: center;
@@ -3247,23 +3270,13 @@
       }
 
       #hero {
-        padding: 80px 0 50px
+        padding: 140px 0 50px
       }
 
-      /* Logo semitransparente de fondo */
+      /* Logo semitransparente de fondo — tamaño reducido en pantallas muy pequeñas */
       #hero::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 320px;
-        height: 320px;
-        background: url('img/logo.png') center/contain no-repeat;
-        opacity: .08;
-        z-index: 1;
-        pointer-events: none
+        width: 280px;
+        height: 280px
       }
 
       .hero-text .eyebrow {
