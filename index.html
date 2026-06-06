@@ -810,6 +810,10 @@
       margin-bottom: 18px
     }
 
+    .sub-mobile {
+      display: none
+    }
+
     .hero-btns {
       display: flex;
       gap: 14px;
@@ -3205,9 +3209,22 @@
         width: 340px;
         height: 340px;
         background: url('img/logo.png') center/contain no-repeat;
-        opacity: .22;
+        opacity: 1;
         z-index: 1;
         pointer-events: none
+      }
+
+      .hero-text p.sub {
+        display: none
+      }
+
+      .sub-mobile {
+        display: block;
+        color: rgba(255, 255, 255, .85);
+        font-size: 1.05rem;
+        max-width: 480px;
+        margin: 0 auto 30px;
+        line-height: 1.7
       }
 
       .hero-grid {
@@ -3441,6 +3458,7 @@
                 aria-hidden="true">&nbsp;</span></h1>
             <p class="sub">Control de plagas y fumigación profesional con productos de baja toxicidad, técnicos
               certificados y <strong>garantía en cada servicio</strong>. Tu tranquilidad es nuestra prioridad.</p>
+            <p class="sub-mobile">Control profesional de plagas.</p>
             <div class="hero-btns">
               <a class="btn btn-primary" data-nav="contacto" data-gtag="cta_agendar"><i
                   class="fa-solid fa-calendar-check"></i> Agendar consulta</a>
@@ -3696,17 +3714,6 @@
               <p class="lead">En Fumiclean Juárez nacimos con una misión clara: ofrecer control de plagas profesional,
                 honesto y accesible para las familias y negocios de Ciudad Juárez. Conocemos las plagas del desierto y
                 sabemos cómo combatirlas de forma segura.</p>
-              <div class="vtimeline">
-                <div class="vt"><b>2023 · Fundación</b>
-                  <p>Iniciamos operaciones atendiendo hogares en Ciudad Juárez con un enfoque cercano y profesional.</p>
-                </div>
-                <div class="vt"><b>Hoy · Crecimiento</b>
-                  <p>Cientos de servicios realizados y ampliación a negocios, comercios y mantenimiento preventivo.</p>
-                </div>
-                <div class="vt"><b>2026 · Compromiso</b>
-                  <p>Seguimos invirtiendo en capacitación y productos seguros para darte el mejor resultado.</p>
-                </div>
-              </div>
             </div>
             <div class="img"><img src="img/tecnico.png"
                 alt="Técnico profesional de Fumiclean Juárez con equipo de fumigación" width="640" height="800"
