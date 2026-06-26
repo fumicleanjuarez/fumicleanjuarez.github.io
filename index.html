@@ -104,9 +104,9 @@
       "@type": "OfferCatalog",
       "name": "Paquetes de fumigación",
       "itemListElement": [
-        { "@type": "Offer", "name": "Paquete Básico", "price": "700", "priceCurrency": "MXN", "description": "Inspección, fumigación interior y exterior, garantía." },
-        { "@type": "Offer", "name": "Paquete Completo", "price": "1000", "priceCurrency": "MXN", "description": "Todo lo del básico + regulador de crecimiento, cebo especializado e insecticida en polvo." },
-        { "@type": "Offer", "name": "Negocios", "price": "400", "priceCurrency": "MXN", "description": "Cotización personalizada que se deduce del total al contratar." }
+        { "@type": "Offer", "name": "Paquete Básico", "price": "700", "priceCurrency": "MXN", "description": "Inspección completa, fumigación interior y exterior, zonas clave: comedor, cocineta, ventanas y puertas. Garantía incluida. Para casas de hasta 120m² (Infonavit)." },
+        { "@type": "Offer", "name": "Paquete Completo", "price": "1000", "priceCurrency": "MXN", "description": "Todo lo del básico + tratamiento que evita que nuevas crías sobrevivan, cebo que elimina la colonia desde el origen e insecticida en polvo para contactos y electrodomésticos. Para casas de hasta 120m² (Infonavit)." },
+        { "@type": "Offer", "name": "Negocios", "priceCurrency": "MXN", "description": "Cotización sin costo para comercios, oficinas, bodegas y casas residenciales. Diagnóstico profesional en sitio, solución personalizada por giro y planes de mantenimiento disponibles." }
       ]
     }
   }
@@ -1883,8 +1883,8 @@
     /* aviso no apto */
     .warn {
       margin-top: 34px;
-      background: rgba(239, 68, 68, .08);
-      border: 1.5px solid rgba(239, 68, 68, .4);
+      background: rgba(34, 197, 94, .07);
+      border: 1.5px solid rgba(34, 197, 94, .3);
       border-radius: 16px;
       padding: 20px 24px;
       display: flex;
@@ -1895,7 +1895,7 @@
     }
 
     .warn i {
-      color: #f87171;
+      color: #4ade80;
       font-size: 1.4rem;
       margin-top: 2px
     }
@@ -1903,7 +1903,7 @@
     .warn b {
       display: block;
       margin-bottom: 4px;
-      color: #fca5a5
+      color: #86efac
     }
 
     .warn p {
@@ -3770,7 +3770,7 @@
     <!-- PÁGINA 3 — PRECIOS (#servicios)                                       -->
     <!-- ===================================================================== -->
     <section class="page" id="servicios" data-title="Precios de Fumigación | Fumiclean Juárez"
-      data-desc="Paquetes de fumigación en Ciudad Juárez: Básico desde $700, Completo desde $1000 y planes para negocios. Cotiza sin compromiso.">
+      data-desc="Paquetes de fumigación en Ciudad Juárez: Básico $700 (1 piso) / $900 (2 pisos), Completo $1,000 (1 piso) / $1,200 (2 pisos) para casas Infonavit hasta 120m². Negocios: cotización sin costo.">
 
       <!-- PRECIOS -->
       <section class="block" style="padding-top:130px">
@@ -3792,11 +3792,12 @@
               <span class="rec">Prevención o casos leves</span>
               <div class="price">$<span data-p1="700" data-p2="900">700</span> <small>MXN</small></div>
               <div class="price2" data-floorlabel>/ 1 piso</div>
+              <p style="font-size:.75rem;color:var(--color-muted);margin:.5rem 0 1rem;border-left:2px solid var(--color-primary);padding-left:8px;">Para casas de hasta 120m² (Infonavit). Casas más grandes: solicita cotización.</p>
               <ul>
-                <li><i class="fa-solid fa-check"></i> Inspección completa</li>
-                <li><i class="fa-solid fa-check"></i> Fumigación interior y exterior</li>
-                <li><i class="fa-solid fa-check"></i> Comedor, cocineta, ventanas y puertas</li>
-                <li><i class="fa-solid fa-check"></i> Garantía de servicio</li>
+                <li><i class="fa-solid fa-check"></i> Inspección completa del hogar</li>
+                <li><i class="fa-solid fa-check"></i> Fumigación interior y exterior del hogar</li>
+                <li><i class="fa-solid fa-check"></i> Zonas clave: comedor, cocineta, ventanas y puertas</li>
+                <li><i class="fa-solid fa-check"></i> Garantía de servicio incluida</li>
               </ul>
               <a class="btn btn-ghost"
                 href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20paquete%20B%C3%A1sico"
@@ -3809,11 +3810,12 @@
               <span class="rec">Infestaciones graves</span>
               <div class="price">$<span data-p1="1000" data-p2="1200">1000</span> <small>MXN</small></div>
               <div class="price2" data-floorlabel>/ 1 piso</div>
+              <p style="font-size:.75rem;color:var(--color-muted);margin:.5rem 0 1rem;border-left:2px solid var(--color-primary);padding-left:8px;">Para casas de hasta 120m² (Infonavit). Casas más grandes: solicita cotización.</p>
               <ul>
                 <li><i class="fa-solid fa-check"></i> Todo lo del paquete Básico</li>
-                <li><i class="fa-solid fa-check"></i> Regulador de crecimiento</li>
-                <li><i class="fa-solid fa-check"></i> Cebo especializado</li>
-                <li><i class="fa-solid fa-check"></i> Insecticida en polvo para tomacorrientes y electrodomésticos</li>
+                <li><i class="fa-solid fa-check"></i> Tratamiento que evita que nuevas crías sobrevivan</li>
+                <li><i class="fa-solid fa-check"></i> Cebo que elimina la colonia desde el origen</li>
+                <li><i class="fa-solid fa-check"></i> Insecticida en polvo para contactos y electrodomésticos</li>
               </ul>
               <a class="btn btn-primary"
                 href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20paquete%20Completo" target="_blank"
@@ -3821,14 +3823,14 @@
             </div>
             <div class="plan">
               <h3>🏢 Negocios</h3>
-              <div class="for">Comercios e industria</div>
+              <div class="for">Comercios, oficinas, bodegas y casas residenciales</div>
               <span class="rec">Cotización personalizada</span>
-              <div class="price">$400 <small>MXN / cotización</small></div>
-              <div class="price2">Se deduce del total al contratar el servicio.</div>
+              <div class="price" style="font-size:1.3rem;letter-spacing:-.01em">Cotización sin costo</div>
+              <div class="price2">Evaluamos tu espacio y te damos el precio exacto. Sin compromiso.</div>
               <ul>
-                <li><i class="fa-solid fa-check"></i> Visita de diagnóstico</li>
-                <li><i class="fa-solid fa-check"></i> Soluciones según giro y tamaño</li>
-                <li><i class="fa-solid fa-check"></i> Plan de manejo integrado</li>
+                <li><i class="fa-solid fa-check"></i> Diagnóstico profesional en sitio</li>
+                <li><i class="fa-solid fa-check"></i> Solución personalizada por giro y tamaño</li>
+                <li><i class="fa-solid fa-check"></i> Planes de mantenimiento disponibles</li>
                 <li><i class="fa-solid fa-check"></i> Atención prioritaria</li>
               </ul>
               <a class="btn btn-ghost"
@@ -3837,23 +3839,10 @@
             </div>
           </div>
 
-          <h3 style="margin-top:54px;font-size:1.4rem">Plagas que tratamos</h3>
-          <div class="plagas-chips">
-            <span class="chip">🪳 Cucarachas</span><span class="chip">🦗 Chinches</span><span class="chip">🐜
-              Hormigas</span>
-            <span class="chip">🦂 Alacranes</span><span class="chip">🕷️ Arañas</span><span class="chip">🦟
-              Mosquitos</span>
-            <span class="chip">🪰 Moscas</span><span class="chip">🐛 Pulgas</span><span class="chip">🐕
-              Garrapatas</span>
-            <span class="chip">🐟 Pescadito de plata</span><span class="chip">🦗 Grillos</span>
-            <span class="chip">🐭 Ratones</span><span class="chip">➕ y más</span>
-          </div>
-
           <div class="warn">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <div><b>Servicio NO apto para ciertos hogares</b>
-              <p>Por seguridad, el servicio de fumigación <strong>no se recomienda</strong> para hogares con mujeres
-                embarazadas, en período de lactancia o con bebés. Si tienes dudas, consúltanos antes de agendar.</p>
+            <i class="fa-solid fa-leaf"></i>
+            <div><b>¿En tu hogar hay bebés, mujeres embarazadas o mascotas?</b>
+              <p>Contamos con un tratamiento de baja toxicidad especial para tu caso. Servicio de prevención para casas de hasta 120m²: <strong>$900 (1 piso) / $1,200 (2 pisos)</strong>. Para casas residenciales o casos con plaga presente, solicita cotización sin costo.</p>
             </div>
           </div>
         </div>
@@ -4861,7 +4850,7 @@
             return 'Con gusto te ayudo a coordinar. 📅 Yo no agendo citas directamente, pero puedo conectarte con un asistente que revisa la disponibilidad y aparta tu fecha al instante. Toca el botón *“Hablar con un asistente”* y te atendemos por WhatsApp. También puedes llenar la solicitud en la sección *Contacto*.';
 
           if (has(n, 'precio', 'costo', 'cuanto', 'cuesta', 'tarifa', 'vale', 'paquete', 'plan'))
-            return 'Nuestros paquetes para *hogar*:%0A• *Básico* — $700 (1 piso) / $900 (2 pisos). Ideal para prevención o casos leves: incluye inspección, fumigación interior y exterior, y garantía.%0A• *Completo* — $1,000 (1 piso) / $1,200 (2 pisos). Para infestaciones graves: todo lo del Básico + regulador de crecimiento, cebo especializado e insecticida en polvo.%0A\nPara *negocios* la cotización cuesta $400 (se descuenta del total si contratas). ¿Quieres que un asistente te dé un precio exacto para tu caso?';
+            return 'Nuestros paquetes para *hogar* (casas Infonavit hasta 120m²):%0A• *Básico* — $700 (1 piso) / $900 (2 pisos). Prevención o casos leves: inspección, fumigación interior y exterior, zonas clave y garantía.%0A• *Completo* — $1,000 (1 piso) / $1,200 (2 pisos). Para infestaciones presentes o graves: todo lo del Básico + tratamiento contra crías, cebo de eliminación y polvo para contactos.%0A• *¿Bebés, embarazadas o mascotas?* Tenemos tratamiento de baja toxicidad: $900 (1 piso) / $1,200 (2 pisos).%0A\nPara *negocios y casas residenciales* la cotización es *sin costo*. ¿Quieres que un asistente te ayude?';
 
           if (has(n, 'plaga', 'cucaracha', 'chinche', 'hormiga', 'alacran', 'escorpion', 'arana', 'mosquito', 'mosca', 'pulga', 'garrapata', 'pescadito', 'grillo', 'insecto', 'bicho', 'rata', 'raton'))
             return 'Tratamos 11 tipos de plagas: cucarachas, chinches, hormigas, alacranes, arañas, mosquitos, moscas, pulgas, garrapatas, pescadito de plata y grillos. 🐜🦂%0ACuéntame cuál tienes y te explico cómo lo tratamos, o un asistente te puede dar una cotización exacta.';
@@ -4870,7 +4859,7 @@
             return '⚠️ Importante: por seguridad, nuestro servicio *NO es apto* para hogares con mujeres embarazadas, en lactancia o con bebés. Si es tu caso, un asistente puede orientarte sobre alternativas seguras. Toca *“Hablar con un asistente”*.';
 
           if (has(n, 'toxic', 'seguro', 'peligros', 'mascota', 'perro', 'gato', 'dañino', 'danino', 'quimico', 'salud'))
-            return 'Usamos productos de *baja toxicidad y seguros* para tu familia y mascotas una vez ventilada el área. ✅ Recomendamos ventilar al menos *1 hora* antes de reingresar. (Nota: el servicio no es apto para hogares con embarazadas, lactancia o bebés.)';
+            return 'Contamos con tratamiento de *baja toxicidad* especial para hogares con bebés, embarazadas o mascotas. 🌿 Para el servicio estándar, recomendamos ventilar al menos *1 hora* antes de reingresar. ¿Quieres más información sobre el tratamiento especial?';
 
           if (has(n, 'antes', 'preparar', 'preparacion', 'que hago antes', 'como me preparo'))
             return 'Antes del servicio: 🧹%0A• Haz una limpieza general.%0A• Guarda los alimentos en recipientes herméticos.%0A• Separa los muebles de las paredes ~20 cm y despeja cocineta y closets.%0A• Retira artículos personales del baño y la cocina.';
