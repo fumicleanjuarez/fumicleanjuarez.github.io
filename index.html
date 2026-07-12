@@ -102,10 +102,15 @@
     "areaServed": "Ciudad Juárez, Chihuahua, México",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Paquetes de fumigación",
+      "name": "Servicios de control de plagas",
       "itemListElement": [
-        { "@type": "Offer", "name": "Paquete Básico", "price": "700", "priceCurrency": "MXN", "description": "Inspección completa, fumigación interior y exterior, zonas clave: comedor, cocineta, ventanas y puertas. Garantía incluida. Para casas de hasta 120m² (Infonavit)." },
-        { "@type": "Offer", "name": "Paquete Completo", "price": "1000", "priceCurrency": "MXN", "description": "Todo lo del básico + tratamiento que evita que nuevas crías sobrevivan, cebo que elimina la colonia desde el origen e insecticida en polvo para contactos y electrodomésticos. Para casas de hasta 120m² (Infonavit)." },
+        { "@type": "Offer", "name": "Preventivo Convencional", "price": "700", "priceCurrency": "MXN", "description": "Tratamiento interior y exterior de acción residual. Inspección profesional, aplicación preventiva y garantía por escrito. Protección residual de 3 meses. $700 (1 piso) / $900 (2 pisos)." },
+        { "@type": "Offer", "name": "Preventivo Insecticida Orgánico", "price": "900", "priceCurrency": "MXN", "description": "Tratamiento preventivo interior y exterior con insecticida orgánico de acción residual, ideal para temporadas de mayor actividad. Duración residual de 30 días. $900 (1 piso) / $1,100 (2 pisos)." },
+        { "@type": "Offer", "name": "Erradicación de Cucarachas", "price": "4200", "priceCurrency": "MXN", "description": "Protocolo premium de 3 visitas (día 1, 20 y 35). Control de focos activos, interrupción del ciclo reproductivo y prevención de reinfestación. Incluye gel, tratamiento residual, seguimiento y garantía por escrito." },
+        { "@type": "Offer", "name": "Erradicación de Hormigas", "price": "1500", "priceCurrency": "MXN", "description": "Protocolo profesional de 2 visitas (día 1 y día 14-21). Tratamiento perimetral exterior, cebo especializado y garantía por escrito." },
+        { "@type": "Offer", "name": "Erradicación de Chinches de Cama", "price": "3300", "priceCurrency": "MXN", "description": "Protocolo premium de 3 visitas (día 1, 20 y 35). Control de focos activos, interrupción del ciclo y tratamiento residual con regulador de crecimiento. Incluye garantía por escrito." },
+        { "@type": "Offer", "name": "Erradicación de Garrapatas", "price": "3000", "priceCurrency": "MXN", "description": "Protocolo premium de 3 visitas (día 1, 20 y 35). Control de focos activos, interrupción del ciclo reproductivo y prevención de reinfestación. Incluye garantía por escrito." },
+        { "@type": "Offer", "name": "Control de Ratones y Ratas", "price": "2600", "priceCurrency": "MXN", "description": "Protocolo profesional de 3 visitas (día 1, 14 y 30). Inspección, cebo rodenticida, hasta 2 cebaderas y 2 trampas mecánicas, monitoreo y garantía por escrito." },
         { "@type": "Offer", "name": "Negocios", "priceCurrency": "MXN", "description": "Cotización sin costo para comercios, oficinas, bodegas y casas residenciales. Diagnóstico profesional en sitio, solución personalizada por giro y planes de mantenimiento disponibles." }
       ]
     }
@@ -1772,6 +1777,11 @@
       background: linear-gradient(180deg, rgba(245, 166, 35, .1), var(--color-bg-2))
     }
 
+    .plan.feat-green {
+      border-color: var(--color-accent);
+      background: linear-gradient(180deg, rgba(37, 211, 102, .1), var(--color-bg-2))
+    }
+
     .plan .pop {
       position: absolute;
       top: -13px;
@@ -1785,6 +1795,15 @@
       text-transform: uppercase;
       padding: 5px 16px;
       border-radius: 50px
+    }
+
+    .plan .pop.green {
+      background: linear-gradient(120deg, var(--color-accent), #4ee08a);
+    }
+
+    .plan .rec.green {
+      color: var(--color-accent);
+      background: rgba(37, 211, 102, .12);
     }
 
     .plan h3 {
@@ -1841,7 +1860,8 @@
       display: flex;
       gap: 10px;
       font-size: .88rem;
-      color: var(--color-muted)
+      color: var(--color-muted);
+      text-align: left
     }
 
     .plan li i {
@@ -3770,15 +3790,15 @@
     <!-- PÁGINA 3 — PRECIOS (#servicios)                                       -->
     <!-- ===================================================================== -->
     <section class="page" id="servicios" data-title="Precios de Fumigación | Fumiclean Juárez"
-      data-desc="Paquetes de fumigación en Ciudad Juárez: Básico $700 (1 piso) / $900 (2 pisos), Completo $1,000 (1 piso) / $1,200 (2 pisos) para casas Infonavit hasta 120m². Negocios: cotización sin costo.">
+      data-desc="Servicios de control de plagas en Ciudad Juárez: preventivo desde $700, protocolos de erradicación de cucarachas, hormigas, chinches, garrapatas y ratones. Negocios: cotización sin costo.">
 
-      <!-- PRECIOS -->
+      <!-- PREVENTIVO -->
       <section class="block" style="padding-top:130px">
         <div class="wrap center">
           <span class="eyebrow"><i class="fa-solid fa-tags"></i> Precios claros 2026</span>
-          <h2 class="h-title">Elige el paquete <span class="g">que más te conviene</span></h2>
-          <p class="lead">La satisfacción y tranquilidad de nuestros clientes son nuestra máxima prioridad. Precios por
-            servicio, sin sorpresas.</p>
+          <h2 class="h-title">Uso preventivo <span class="g">para tu hogar</span></h2>
+          <p class="lead">Protección preventiva con tratamiento profesional de acción residual. Ideal para reducir el
+            riesgo de infestaciones y mantener tu hogar protegido.</p>
           <div class="pricing-toggle">
             <span id="lblFloor1">1 piso</span>
             <span class="switch" id="floorSwitch" role="switch" aria-checked="false" tabindex="0"
@@ -3787,39 +3807,40 @@
           </div>
           <div class="plans">
             <div class="plan">
-              <h3>👍 Básico</h3>
+              <h3>🛡️ Preventivo Convencional</h3>
               <div class="for">Hogares</div>
-              <span class="rec">Prevención o casos leves</span>
+              <span class="rec">Mantenimiento preventivo</span>
               <div class="price">$<span data-p1="700" data-p2="900">700</span> <small>MXN</small></div>
               <div class="price2" data-floorlabel>/ 1 piso</div>
-              <p style="font-size:.75rem;color:var(--color-muted);margin:.5rem 0 1rem;border-left:2px solid var(--color-primary);padding-left:8px;">Para casas de hasta 120m² (Infonavit). Casas más grandes: solicita cotización.</p>
+              <p style="font-size:.75rem;color:var(--color-muted);margin:.5rem 0 1rem;border-left:2px solid var(--color-primary);padding-left:8px;">Protección residual aproximada de 3 meses.</p>
               <ul>
-                <li><i class="fa-solid fa-check"></i> Inspección completa del hogar</li>
-                <li><i class="fa-solid fa-check"></i> Fumigación interior y exterior del hogar</li>
-                <li><i class="fa-solid fa-check"></i> Zonas clave: comedor, cocineta, ventanas y puertas</li>
-                <li><i class="fa-solid fa-check"></i> Garantía de servicio incluida</li>
+                <li><i class="fa-solid fa-check"></i> Inspección profesional</li>
+                <li><i class="fa-solid fa-check"></i> Aplicación preventiva interior y exterior</li>
+                <li><i class="fa-solid fa-check"></i> Ayuda a prevenir infestaciones</li>
+                <li><i class="fa-solid fa-check"></i> Garantía por escrito</li>
               </ul>
               <a class="btn btn-ghost"
-                href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20paquete%20B%C3%A1sico"
-                target="_blank" rel="noopener" data-gtag="wa_plan_basico">Solicitar Básico</a>
+                href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20Preventivo%20Convencional"
+                target="_blank" rel="noopener" data-gtag="wa_plan_basico">Solicitar Preventivo</a>
             </div>
-            <div class="plan feat">
-              <span class="pop">⭐ Más popular</span>
-              <h3>👑 Completo</h3>
+            <div class="plan feat-green">
+              <span class="pop green">🌿 Orgánico</span>
+              <h3>🌱 Preventivo Insecticida Orgánico</h3>
               <div class="for">Hogares</div>
-              <span class="rec">Infestaciones graves</span>
-              <div class="price">$<span data-p1="1000" data-p2="1200">1000</span> <small>MXN</small></div>
+              <span class="rec green">Temporadas de mayor actividad</span>
+              <div class="price">$<span data-p1="900" data-p2="1100">900</span> <small>MXN</small></div>
               <div class="price2" data-floorlabel>/ 1 piso</div>
-              <p style="font-size:.75rem;color:var(--color-muted);margin:.5rem 0 1rem;border-left:2px solid var(--color-primary);padding-left:8px;">Para casas de hasta 120m² (Infonavit). Casas más grandes: solicita cotización.</p>
+              <p style="font-size:.75rem;color:var(--color-muted);margin:.5rem 0 1rem;border-left:2px solid var(--color-accent);padding-left:8px;">Duración residual aproximada de 30 días.</p>
               <ul>
-                <li><i class="fa-solid fa-check"></i> Todo lo del paquete Básico</li>
-                <li><i class="fa-solid fa-check"></i> Tratamiento que evita que nuevas crías sobrevivan</li>
-                <li><i class="fa-solid fa-check"></i> Cebo que elimina la colonia desde el origen</li>
-                <li><i class="fa-solid fa-check"></i> Insecticida en polvo para contactos y electrodomésticos</li>
+                <li><i class="fa-solid fa-check"></i> Inspección profesional</li>
+                <li><i class="fa-solid fa-check"></i> Aplicación con insecticida orgánico</li>
+                <li><i class="fa-solid fa-check"></i> Tratamiento interior y exterior</li>
+                <li><i class="fa-solid fa-check"></i> Recomendaciones básicas de prevención</li>
+                <li><i class="fa-solid fa-check"></i> Recomendado para hogares con bebés, mujeres embarazadas o mascotas</li>
               </ul>
               <a class="btn btn-primary"
-                href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20paquete%20Completo" target="_blank"
-                rel="noopener" data-gtag="wa_plan_completo">Solicitar Completo</a>
+                href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20Preventivo%20Org%C3%A1nico" target="_blank"
+                rel="noopener" data-gtag="wa_plan_completo">Solicitar Orgánico</a>
             </div>
             <div class="plan">
               <h3>🏢 Negocios</h3>
@@ -3838,18 +3859,104 @@
                 rel="noopener" data-gtag="wa_plan_negocio">Solicitar cotización</a>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="warn">
-            <i class="fa-solid fa-leaf"></i>
-            <div><b>¿En tu hogar hay bebés, mujeres embarazadas o mascotas?</b>
-              <p>Contamos con un tratamiento de baja toxicidad especial para tu caso. Servicio de prevención para casas de hasta 120m²: <strong>$900 (1 piso) / $1,200 (2 pisos)</strong>. Para casas residenciales o casos con plaga presente, solicita cotización sin costo.</p>
+      <!-- ERRADICACIÓN -->
+      <section class="block" style="background:var(--color-bg-2);border-block:1px solid var(--color-border)">
+        <div class="wrap center">
+          <span class="eyebrow"><i class="fa-solid fa-bug-slash"></i> Protocolos de erradicación</span>
+          <h2 class="h-title">¿Ya tienes la <span class="g">plaga presente?</span></h2>
+          <p class="lead">Protocolos de varias visitas para atacar focos activos, interrumpir el ciclo reproductivo y
+            ayudar a prevenir la reinfestación. Incluyen seguimiento y garantía por escrito al completar el protocolo.</p>
+          <div class="plans">
+            <div class="plan feat">
+              <span class="pop">⭐ Alta demanda</span>
+              <h3>🪳 Cucarachas</h3>
+              <div class="for">Protocolo premium · 3 visitas</div>
+              <span class="rec">Día 1 · Día 20 · Día 35</span>
+              <div class="price">$4,200 <small>MXN</small></div>
+              <div class="price2">o 3 pagos de $1,500 por visita · Ahorra $300 con el paquete completo</div>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Inspección profesional</li>
+                <li><i class="fa-solid fa-check"></i> Productos profesionales y de última tecnología</li>
+                <li><i class="fa-solid fa-check"></i> Interrupción del ciclo reproductivo</li>
+                <li><i class="fa-solid fa-check"></i> Seguimiento y garantía por escrito</li>
+              </ul>
+              <a class="btn btn-primary"
+                href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20protocolo%20de%20Erradicaci%C3%B3n%20de%20Cucarachas"
+                target="_blank" rel="noopener" data-gtag="wa_plan_cucarachas">Solicitar protocolo</a>
+            </div>
+            <div class="plan">
+              <h3>🐜 Hormigas</h3>
+              <div class="for">Protocolo profesional · 2 visitas</div>
+              <span class="rec">Día 1 · Día 14-21</span>
+              <div class="price">$1,500 <small>MXN</small></div>
+              <div class="price2">o 2 pagos de $850 por visita · Ahorra $200 con el paquete completo</div>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Aplicación perimetral exterior</li>
+                <li><i class="fa-solid fa-check"></i> Productos profesionales y de última tecnología</li>
+                <li><i class="fa-solid fa-check"></i> Control de senderos activos</li>
+                <li><i class="fa-solid fa-check"></i> Seguimiento y garantía por escrito</li>
+              </ul>
+              <a class="btn btn-ghost"
+                href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20protocolo%20de%20Erradicaci%C3%B3n%20de%20Hormigas"
+                target="_blank" rel="noopener" data-gtag="wa_plan_hormigas">Solicitar protocolo</a>
+            </div>
+            <div class="plan">
+              <h3>🛏️ Chinches de cama</h3>
+              <div class="for">Protocolo premium · 3 visitas</div>
+              <span class="rec">Día 1 · Día 20 · Día 35</span>
+              <div class="price">$3,300 <small>MXN</small></div>
+              <div class="price2">o 3 pagos de $1,200 por visita · Ahorra $300 con el paquete completo</div>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Aplicación especializada</li>
+                <li><i class="fa-solid fa-check"></i> Productos profesionales y de última tecnología</li>
+                <li><i class="fa-solid fa-check"></i> Interrupción del ciclo</li>
+                <li><i class="fa-solid fa-check"></i> Seguimiento y garantía por escrito</li>
+              </ul>
+              <a class="btn btn-ghost"
+                href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20protocolo%20de%20Erradicaci%C3%B3n%20de%20Chinches%20de%20Cama"
+                target="_blank" rel="noopener" data-gtag="wa_plan_chinches">Solicitar protocolo</a>
+            </div>
+            <div class="plan">
+              <h3>🕷️ Garrapatas</h3>
+              <div class="for">Protocolo premium · 3 visitas</div>
+              <span class="rec">Día 1 · Día 20 · Día 35</span>
+              <div class="price">$3,000 <small>MXN</small></div>
+              <div class="price2">o 3 pagos de $1,100 por visita · Ahorra $300 con el paquete completo</div>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Aplicación especializada</li>
+                <li><i class="fa-solid fa-check"></i> Productos profesionales y de última tecnología</li>
+                <li><i class="fa-solid fa-check"></i> Prevención de reinfestación</li>
+                <li><i class="fa-solid fa-check"></i> Seguimiento y garantía por escrito</li>
+              </ul>
+              <a class="btn btn-ghost"
+                href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20protocolo%20de%20Erradicaci%C3%B3n%20de%20Garrapatas"
+                target="_blank" rel="noopener" data-gtag="wa_plan_garrapatas">Solicitar protocolo</a>
+            </div>
+            <div class="plan">
+              <h3>🐀 Ratones y ratas</h3>
+              <div class="for">Protocolo profesional · 3 visitas</div>
+              <span class="rec">Día 1 · Día 14 · Día 30</span>
+              <div class="price">$2,600 <small>MXN</small></div>
+              <div class="price2">o 3 pagos de $950 por visita · Ahorra $250 con el paquete completo</div>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Cebo rodenticida y monitoreo</li>
+                <li><i class="fa-solid fa-check"></i> Hasta 2 cebaderas y 2 trampas mecánicas</li>
+                <li><i class="fa-solid fa-check"></i> Monitoreo de accesos y actividad</li>
+                <li><i class="fa-solid fa-check"></i> Sellado básico, seguimiento y garantía por escrito</li>
+              </ul>
+              <a class="btn btn-ghost"
+                href="https://wa.me/526563859489?text=Hola!%20Me%20interesa%20el%20protocolo%20de%20Control%20de%20Ratones%20y%20Ratas"
+                target="_blank" rel="noopener" data-gtag="wa_plan_roedores">Solicitar protocolo</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- TECNOLOGÍA -->
-      <section class="block" style="background:var(--color-bg-2);border-block:1px solid var(--color-border)">
+      <section class="block">
         <div class="wrap center">
           <span class="eyebrow"><i class="fa-solid fa-spray-can-sparkles"></i> Tecnología y métodos</span>
           <h2 class="h-title">Cómo lo <span class="g">hacemos</span></h2>
@@ -4014,10 +4121,14 @@
                 <div class="field"><label for="fService">Servicio de interés *</label>
                   <select id="fService">
                     <option value="">Selecciona…</option>
-                    <option>Paquete Básico (hogar)</option>
-                    <option>Paquete Completo (hogar)</option>
+                    <option>Preventivo Convencional (hogar)</option>
+                    <option>Preventivo Insecticida Orgánico (hogar)</option>
+                    <option>Erradicación de Cucarachas</option>
+                    <option>Erradicación de Hormigas</option>
+                    <option>Erradicación de Chinches de Cama</option>
+                    <option>Erradicación de Garrapatas</option>
+                    <option>Control de Ratones y Ratas</option>
                     <option>Servicio para negocio</option>
-                    <option>Mantenimiento preventivo</option>
                     <option>No sé, necesito asesoría</option>
                   </select>
                 </div>
@@ -4675,7 +4786,7 @@
             '<h3>2. Guarda los alimentos herméticamente</h3><p>Pasa la harina, el azúcar, los cereales y las croquetas de tus mascotas a recipientes con tapa hermética. No dejes platos sucios durante la noche y limpia de inmediato las migas y derrames, sobre todo de grasa y azúcar.</p>' +
             '<h3>3. Cierra sus rutas de entrada</h3><p>Sella grietas en zócalos, alrededor de tuberías y en marcos de ventanas con silicón. Coloca mallas en coladeras y revisa las cajas de cartón que traes de la tienda: el cartón es uno de los principales vehículos de huevecillos.</p>' +
             '<h3>4. Saca la basura a diario</h3><p>Usa botes con tapa y lávalos cada cierto tiempo. La materia orgánica en descomposición es un imán para las cucarachas y otras plagas rastreras.</p>' +
-            '<h3>¿Y si ya las tengo?</h3><p>Cuando la prevención no es suficiente, un tratamiento profesional con insecticida residual, cebo especializado y regulador de crecimiento elimina la colonia de raíz, no solo los insectos visibles. En infestaciones graves recomendamos nuestro paquete Completo, que incluye insecticida en polvo para tomacorrientes y electrodomésticos, los escondites preferidos de las cucarachas. Si ves cucarachas de día, es señal de una población alta: escríbenos y te orientamos.</p>'
+            '<h3>¿Y si ya las tengo?</h3><p>Cuando la prevención no es suficiente, un tratamiento profesional con insecticida residual, cebo especializado y regulador de crecimiento elimina la colonia de raíz, no solo los insectos visibles. En infestaciones graves recomendamos nuestro protocolo premium de Erradicación de Cucarachas (3 visitas), que incluye gel y tratamiento residual en tomacorrientes y electrodomésticos, los escondites preferidos de las cucarachas. Si ves cucarachas de día, es señal de una población alta: escríbenos y te orientamos.</p>'
         },
         {
           cat: 'hogar', tag: 'Hogar', date: '3 feb 2026', read: '6 min',
@@ -4850,22 +4961,22 @@
             return 'Con gusto te ayudo a coordinar. 📅 Yo no agendo citas directamente, pero puedo conectarte con un asistente que revisa la disponibilidad y aparta tu fecha al instante. Toca el botón *“Hablar con un asistente”* y te atendemos por WhatsApp. También puedes llenar la solicitud en la sección *Contacto*.';
 
           if (has(n, 'precio', 'costo', 'cuanto', 'cuesta', 'tarifa', 'vale', 'paquete', 'plan'))
-            return 'Nuestros paquetes para *hogar* (casas Infonavit hasta 120m²):%0A• *Básico* — $700 (1 piso) / $900 (2 pisos). Prevención o casos leves: inspección, fumigación interior y exterior, zonas clave y garantía.%0A• *Completo* — $1,000 (1 piso) / $1,200 (2 pisos). Para infestaciones presentes o graves: todo lo del Básico + tratamiento contra crías, cebo de eliminación y polvo para contactos.%0A• *¿Bebés, embarazadas o mascotas?* Tenemos tratamiento de baja toxicidad: $900 (1 piso) / $1,200 (2 pisos).%0A\nPara *negocios y casas residenciales* la cotización es *sin costo*. ¿Quieres que un asistente te ayude?';
+            return '*Preventivo* (mantenimiento, sin plaga presente):%0A• *Convencional* — $700 (1 piso) / $900 (2 pisos). Residual 3 meses.%0A• *Insecticida orgánico* — $900 (1 piso) / $1,100 (2 pisos). Residual 30 días, ideal para bebés, embarazadas o mascotas.%0A\n*Protocolos de erradicación* (plaga ya presente, 2-3 visitas con garantía):%0A• *Hormigas* — $1,500 (2 visitas)%0A• *Ratones y ratas* — $2,600 (3 visitas)%0A• *Garrapatas* — $3,000 (3 visitas)%0A• *Chinches de cama* — $3,300 (3 visitas)%0A• *Cucarachas* — $4,200 (3 visitas)%0A\nTodos los protocolos también se pueden pagar por visita. Para *negocios* la cotización es *sin costo*. ¿Quieres que un asistente te ayude?';
 
           if (has(n, 'plaga', 'cucaracha', 'chinche', 'hormiga', 'alacran', 'escorpion', 'arana', 'mosquito', 'mosca', 'pulga', 'garrapata', 'pescadito', 'grillo', 'insecto', 'bicho', 'rata', 'raton'))
-            return 'Tratamos 11 tipos de plagas: cucarachas, chinches, hormigas, alacranes, arañas, mosquitos, moscas, pulgas, garrapatas, pescadito de plata y grillos. 🐜🦂%0ACuéntame cuál tienes y te explico cómo lo tratamos, o un asistente te puede dar una cotización exacta.';
+            return 'Nuestros servicios más solicitados tienen protocolo propio: *cucarachas*, *hormigas*, *chinches de cama*, *garrapatas* y *ratones y ratas*. 🐜🐀 También tratamos alacranes, arañas, mosquitos, moscas, pulgas, pescadito de plata y grillos.%0ACuéntame cuál tienes y te explico cómo lo tratamos, o un asistente te puede dar una cotización exacta.';
 
           if (has(n, 'embaraz', 'lactancia', 'bebe', 'bebes', 'recien nacido', 'amamant', 'niño pequeño', 'nino pequeno'))
             return '⚠️ Importante: por seguridad, nuestro servicio *NO es apto* para hogares con mujeres embarazadas, en lactancia o con bebés. Si es tu caso, un asistente puede orientarte sobre alternativas seguras. Toca *“Hablar con un asistente”*.';
 
           if (has(n, 'toxic', 'seguro', 'peligros', 'mascota', 'perro', 'gato', 'dañino', 'danino', 'quimico', 'salud'))
-            return 'Contamos con tratamiento de *baja toxicidad* especial para hogares con bebés, embarazadas o mascotas. 🌿 Para el servicio estándar, recomendamos ventilar al menos *1 hora* antes de reingresar. ¿Quieres más información sobre el tratamiento especial?';
+            return 'Contamos con nuestro *Preventivo Insecticida Orgánico* especial para hogares con bebés, embarazadas o mascotas. 🌿 Para el servicio estándar, mantén a las mascotas fuera de las áreas tratadas hasta que estén completamente secas y ventila *2-3 horas* después. ¿Quieres más información sobre el tratamiento orgánico?';
 
           if (has(n, 'antes', 'preparar', 'preparacion', 'que hago antes', 'como me preparo'))
-            return 'Antes del servicio: 🧹%0A• Haz una limpieza general.%0A• Guarda los alimentos en recipientes herméticos.%0A• Separa los muebles de las paredes ~20 cm y despeja cocineta y closets.%0A• Retira artículos personales del baño y la cocina.';
+            return 'Antes del servicio: 🧹%0A• Recoge objetos, juguetes y alimentos de pisos, mesas y superficies.%0A• Guarda o tapa alimentos y utensilios de cocina y baño.%0A• Facilita el acceso a zócalos, rincones, bajo fregaderos y áreas problemáticas.%0A• Retira o resguarda a las mascotas durante la aplicación.%0A• Mantén ventanas y puertas cerradas durante el servicio.';
 
           if (has(n, 'despues', 'luego del servicio', 'termina', 'ventilar', 'ventilacion', 'regreso', 'volver a casa'))
-            return 'Después del servicio: 🌬️%0A• Ventila abriendo puertas y ventanas; mantén el área sin alimentos por 2 horas.%0A• Permanece fuera del hogar al menos *1 hora*.%0A• Evita la limpieza profunda de las áreas tratadas por 48 horas.%0A• Mantén una rutina de limpieza para prevenir reinfestación.';
+            return 'Después del servicio: 🌬️%0A• No limpies ni trapees las áreas tratadas por al menos *24 horas*.%0A• Permanece fuera del domicilio al menos *1 hora* después del servicio.%0A• Mantén a las mascotas fuera de las áreas tratadas hasta que estén completamente secas.%0A• Ventila las áreas tratadas después de *2-3 horas*.%0A• Evita limpiar los perímetros de las paredes para prolongar el efecto residual.';
 
           if (has(n, 'frecuencia', 'cada cuando', 'segundo servicio', 'repetir', 'reaplicar', 'vuelve', 'persiste', 'cuantas veces'))
             return 'Si la plaga persiste, recomendamos un *segundo servicio entre 7 y 15 días* después del primero. Para mantenimiento preventivo, una aplicación *trimestral* suele ser suficiente. 🔁';
